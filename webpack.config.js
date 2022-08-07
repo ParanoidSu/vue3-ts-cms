@@ -6,10 +6,10 @@ module.exports = {
   // ...
   plugins: [
     AutoImport({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver()]
     }),
     Components({
-      resolvers: [ElementPlusResolver()],
-    }),
-  ],
+      resolvers: [ElementPlusResolver()]
+    })
+  ]
 }

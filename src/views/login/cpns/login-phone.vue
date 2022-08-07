@@ -29,9 +29,14 @@ export default defineComponent({
       verifyCode: ''
     })
 
+    const LoginPhone = () => {
+      console.log('phone登录')
+    }
+
     return {
       phone,
-      rules
+      rules,
+      LoginPhone
     }
   }
 })

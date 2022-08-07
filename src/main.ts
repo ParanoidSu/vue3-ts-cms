@@ -5,20 +5,20 @@ import router from './router'
 import store from './store'
 import globalRegister from './global'
 import './service/axios-demo'
-import JlRequest from './service'
+// import JlRequest from './service'
 import 'normalize.css'
 import './assets/css/index.less'
+import { setupStore } from './store'
 
 const app = createApp(App)
 
-// registerApp(app)
+globalRegister(app)
 
 app.use(router)
 app.use(store)
-app.use(globalRegister)
+// app.use(globalRegister)
 app.mount('#app')
-
-
+setupStore()
 
 // interface DataType {
 //   data: any

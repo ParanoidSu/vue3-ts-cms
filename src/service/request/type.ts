@@ -1,9 +1,10 @@
-import { AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosRequestConfig } from 'axios'
+// import { AxiosResponse } from 'axios'
 
 export interface JLRequestInterceptors {
-  requestInterceptors?: (config: AxiosRequestConfig) =>AxiosRequestConfig,
-  requestInterceptorsCatch?: (err: any) =>any,
-  responseInterceptors?: (config: any) =>any,
+  requestInterceptors?: (config: AxiosRequestConfig) => AxiosRequestConfig
+  requestInterceptorsCatch?: (err: any) => any
+  responseInterceptors?: (config: any) => any
   responseInterceptorsCatch?: (err: any) => any
 }
 
