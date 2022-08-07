@@ -1,6 +1,6 @@
 <template>
-  <div class="app">
-    <router-view></router-view>
+  <div>
+    main
   </div>
 </template>
 
@@ -8,16 +8,14 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'App',
+  setup () {
 
-  setup() {
+
     return {}
   }
 })
 </script>
 
-<style lang="less" scoped>
-.app {
-  height: 100%;
-}
+<style scoped>
+
 </style>
