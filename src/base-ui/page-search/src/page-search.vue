@@ -41,9 +41,8 @@ export default defineComponent({
   emits: ['restBtnClick', 'queryBtnClick'],
   setup(props, { emit }) {
     // 动态设定formData
-    const formItems: any = computed(() => {
-      return props.searchFormConfig.formItem
-    })
+    const formItems = props.searchFormConfig.formItem
+
     const formOriginData: any = []
     for (const item of formItems) {
       formOriginData[item.field] = ''

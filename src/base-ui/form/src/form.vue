@@ -62,7 +62,7 @@ export default defineComponent({
   props: {
     formItem: {
       type: Array as PropType<IFormItem[]>,
-      default: () => {}
+      default: () => ({})
     },
     lableWidth: {
       type: String,
