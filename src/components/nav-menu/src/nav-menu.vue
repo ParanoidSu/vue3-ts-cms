@@ -3,7 +3,7 @@
     <div class="logo">
       <img class="img" src="~@/assets/img/logo.svg" alt="" />
       <transition name="fade">
-        <span class="title" v-show="isCollapse === false">Vue3+Ts</span>
+        <span class="title" v-show="isCollapse === false">Vue3+Ts+verify</span>
       </transition>
     </div>
     <el-menu

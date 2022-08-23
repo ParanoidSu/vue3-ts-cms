@@ -20,7 +20,6 @@
 import { defineComponent, ref } from 'vue'
 import NavMenu from '@/components/nav-menu'
 import NavHeader from '@/components/nav-header'
-import { useRoute } from 'vue-router'
 
 export default defineComponent({
   components: {
@@ -29,7 +28,6 @@ export default defineComponent({
   },
   setup() {
     const isCollapse = ref(false)
-    const router = useRoute()
 
     const handleFoldChange = (isFold: boolean) => {
       isCollapse.value = isFold

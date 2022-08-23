@@ -1,11 +1,9 @@
 import { createStore } from 'vuex'
-import { IRootState, IStoreType } from './types'
+import { IRootState } from './types'
 
 import login from './login/login'
 import system from './main/system/system'
 import overview from './main/analysis/overview'
-
-import { getPgaeListData } from '@/service/main/system/system'
 
 const store = createStore<IRootState>({
   state: () => {
@@ -76,7 +74,7 @@ const store = createStore<IRootState>({
   },
   getters: {},
   actions: {
-    async getInitialDataAction({ commit }) {
+    async getInitialDataAction() {
       // 通过try catch 可以在上一个await失败时还能继续执行
       // try {
       //   const departmentResult = await getPgaeListData('/department/list', {

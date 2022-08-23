@@ -61,8 +61,7 @@ import { IFormItem } from '../types/type'
 export default defineComponent({
   props: {
     formItem: {
-      type: Array as PropType<IFormItem[]>,
-      default: () => ({})
+      type: Array as PropType<IFormItem[]>
     },
     lableWidth: {
       type: String,
