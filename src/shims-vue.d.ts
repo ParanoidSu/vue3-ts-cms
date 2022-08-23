@@ -6,3 +6,6 @@ declare module '*.vue' {
 }
 
 // declare const VUE_APP_BASE_API: string
+
+
+

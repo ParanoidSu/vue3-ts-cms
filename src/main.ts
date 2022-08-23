@@ -1,6 +1,5 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-
 import router from './router'
 import store from './store'
 import globalRegister from './global'
@@ -10,15 +9,21 @@ import 'normalize.css'
 import './assets/css/index.less'
 import { setupStore } from './store'
 
+declare module '@vue/runtime-core' {
+  interface ComponentCustomProperties {
+    $filters: any
+  }
+}
+
 const app = createApp(App)
 
 globalRegister(app)
-
+// setupStore要放在use router上面 因为放在下面会导致install router时候没有注册动态路由
+setupStore()
 app.use(router)
 app.use(store)
 // app.use(globalRegister)
 app.mount('#app')
-setupStore()
 
 // interface DataType {
 //   data: any

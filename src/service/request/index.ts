@@ -11,7 +11,8 @@ class JLRequest {
   constructor(config: JLConfig) {
     this.instance = axios.create(config)
     this.interceptors = config.interceptors
-    this.showLoading = config.showLoading ?? true
+    // 拦截器默认开启与否
+    this.showLoading = config.showLoading ?? false
 
     this.instance.interceptors.request.use(
       this.interceptors?.requestInterceptors,
@@ -83,16 +84,16 @@ class JLRequest {
     })
   }
 
-  get<T>(config: JLConfig): Promise<T> {
+  get<T = any>(config: JLConfig): Promise<T> {
     return this.request<T>({ ...config, method: 'GET' })
   }
-  post<T>(config: JLConfig): Promise<T> {
+  post<T = any>(config: JLConfig): Promise<T> {
     return this.request<T>({ ...config, method: 'POST' })
   }
-  delete<T>(config: JLConfig): Promise<T> {
+  delete<T = any>(config: JLConfig): Promise<T> {
     return this.request<T>({ ...config, method: 'DELETE' })
   }
-  patch<T>(config: JLConfig): Promise<T> {
+  patch<T = any>(config: JLConfig): Promise<T> {
     return this.request<T>({ ...config, method: 'PATHC' })
   }
 }
